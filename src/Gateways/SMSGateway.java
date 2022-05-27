@@ -4,7 +4,7 @@ import Messages.DailyNewsMobileMessage;
 import Messages.GradesAnnouncementMobileMessage;
 import Messages.TaskAddedMobileMessage;
 
-public class SMSGateway {
+public class SMSGateway implements Gateway {
 	
 	public void sendMessage(Object message, String user) {
 		String[] placeHolders = new String[] {}; // set some place holders here 

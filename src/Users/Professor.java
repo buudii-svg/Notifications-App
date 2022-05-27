@@ -2,14 +2,12 @@ package Users;
 
 import java.sql.Date;
 
-public class Professor {
-	String name;
+import Observer.Observer;
+
+public class Professor extends User implements Observer  {
 	String department;
 	Date hirringDate;
 	String PhDTopic;
-	String email;
-	String phoneNumber;
-	
 	
 	public Professor(String name, String department, Date hirringDate, String phDTopic, String email,
 			String phoneNumber) {
@@ -68,9 +66,11 @@ public class Professor {
 		PhDTopic = phDTopic;
 	}
 	
-	
-	public void notifyProfessor(String message) {
-		// do some stuff
+
+	// Same as notifyProfessor
+	@Override
+	public void update(Object message) {
+		// TODO Auto-generated method stub
 		
 	}
 	
