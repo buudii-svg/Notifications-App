@@ -2,11 +2,13 @@ import java.util.ArrayList;
 
 import Gateways.EmailGateway;
 import Messages.TaskAddedEmailMessage;
+import Observer.Observer;
+import Observer.Subject;
 import Users.Professor;
 import Users.Student;
 import Users.TA;
 
-public class Course {
+public class Course implements Subject {
 	
 	String name;
 	String code;
@@ -105,19 +107,37 @@ public class Course {
 		
 		
 		for (Professor professor : professorsForEmailNotification) {
-			professor.notifyProfessor(notification);
+			professor.update(notification);
 			emailGateway.sendMessage(notification, professor.getEmail());
 		}
 		
 		for (TA ta : TAsForEmailNotification) {
-			ta.notifyTA(notification);
+			ta.update(notification);
 			emailGateway.sendMessage(notification, ta.getEmail());
 		}
 		
 		for (Student student : studentsForSMSNotification) {
-			student.notifyStudent(notification);
+			student.update(notification);
 			emailGateway.sendMessage(notification, student.getEmail());
 		}
+	}
+
+	@Override
+	public void registerObserver(Observer o) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeObserver(Observer o) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void notifyObservers() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

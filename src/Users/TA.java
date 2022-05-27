@@ -1,11 +1,10 @@
 package Users;
 
-public class TA {
-	String name;
+import Observer.Observer;
+
+public class TA extends User implements Observer {
+
 	String department;
-	String email;
-	String phoneNumber;
-	
 	
 
 	public TA(String name, String department, String email, String phoneNumber) {
@@ -51,9 +50,11 @@ public class TA {
 	public void setDepartment(String department) {
 		this.department = department;
 	}
-	
-	public void notifyTA(String message) {
-		// do some stuff
+
+	// Same as notifyTA
+	@Override
+	public void update(Object message) {
+		// TODO Auto-generated method stub
 		
 	}
 	

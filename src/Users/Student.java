@@ -1,11 +1,10 @@
 package Users;
 
-public class Student {
-	String name;
-	int Id;
-	String email;
-	String phoneNumber;
+import Observer.Observer;
+
+public class Student extends User implements Observer {
 	
+	int Id;
 	
 	
 	public Student(String name, int id, String email, String phoneNumber) {
@@ -51,10 +50,12 @@ public class Student {
 	public void setId(int id) {
 		Id = id;
 	}
-	
-	
-	public void notifyStudent(String message) {
-		// do some stuff
+
+	// Same as notifyStudent
+	@Override
+	public void update(Object message) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }
