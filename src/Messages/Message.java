@@ -1,5 +1,5 @@
 package Messages;
 
 public interface Message {
-    public String prepareMessage(String placeHolders[]);
+    public String prepareMessage(String[] placeHolders);
 }

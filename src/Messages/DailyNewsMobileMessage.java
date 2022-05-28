@@ -1,9 +1,9 @@
 package Messages;
 
-public class DailyNewsMobileMessage {
+public class DailyNewsMobileMessage extends DailyNews {
 	
-	public String prepareMessage(String placeHolders[]) {
+	public String prepareMessage(String[] placeHolders) {
 		// code to replace place holders of this type
-		return "";
+		return "a";
 	}
 }
