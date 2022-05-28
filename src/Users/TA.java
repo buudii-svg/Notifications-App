@@ -5,7 +5,6 @@ import Observer.Observer;
 public class TA extends User implements Observer {
 
 	String department;
-	
 
 	public TA(String name, String department, String email, String phoneNumber) {
 		super();
@@ -15,21 +14,17 @@ public class TA extends User implements Observer {
 		this.phoneNumber = phoneNumber;
 	}
 
-
 	public String getEmail() {
 		return email;
 	}
-
 
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
-
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
@@ -54,8 +49,8 @@ public class TA extends User implements Observer {
 	// Same as notifyTA
 	@Override
 	public void update(Object message) {
-		// TODO Auto-generated method stub
-		
+		//
+
 	}
-	
+
 }

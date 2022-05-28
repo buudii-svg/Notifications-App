@@ -3,59 +3,59 @@ package Users;
 import Observer.Observer;
 
 public class Student extends User implements Observer {
-	
-	int Id;
-	
-	
-	public Student(String name, int id, String email, String phoneNumber) {
-		super();
-		this.name = name;
-		Id = id;
-		this.email = email;
-		this.phoneNumber = phoneNumber;
-	}
+
+    int id;
 
 
-	public String getEmail() {
-		return email;
-	}
+    public Student(String name, int id, String email, String phoneNumber) {
+        super();
+        this.name = name;
+        this.id = id;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
 
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public String getEmail() {
+        return email;
+    }
 
 
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
 
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 
-	public String getName() {
-		return name;
-	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
-	public int getId() {
-		return Id;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setId(int id) {
-		Id = id;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	// Same as notifyStudent
-	@Override
-	public void update(Object message) {
-		// TODO Auto-generated method stub
-		
-	}
-	
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    // Same as notifyStudent
+    @Override
+    public void update(Object message) {
+        //
+
+    }
+
 }
